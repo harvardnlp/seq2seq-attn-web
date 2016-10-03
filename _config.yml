@@ -9,7 +9,7 @@ permalink:        pretty
 # Setup
 title:            'seq2seq-attn'
 tagline:          'NMT'
-description:      'A general purpose <a href="http://jekyllrb.com" target="_blank">sequence-to-sequence</a> model. Made by Yoon Kim and <a href="https://twitter.com/harvardnlp" target="_blank">@harvardnlp</a>.'
+description:      'A general-purpose <a href="http://jekyllrb.com" target="_blank">sequence-to-sequence</a> model for <a href="http://torch.ch">Torch</a>. Made by Yoon Kim and <a href="https://twitter.com/harvardnlp" target="_blank">@harvardnlp</a>.'
 url:              https://harvardnlp.github.io/seq2seq-attn-web/
 baseurl:          /seq2seq-attn-web/
 
