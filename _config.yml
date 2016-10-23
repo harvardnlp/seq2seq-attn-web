@@ -9,7 +9,7 @@ permalink:        pretty
 # Setup
 title:            'OpenNMT'
 tagline:          'NMT'
-description:      'An open-source neural machine translation system. Made by Yoon Kim and <a href="https://twitter.com/harvardnlp" target="_blank">@harvardnlp</a>.'
+description:      'An open-source neural machine translation system.'
 url:              https://harvardnlp.github.io/seq2seq-attn-web/
 baseurl:          /seq2seq-attn-web/
 
