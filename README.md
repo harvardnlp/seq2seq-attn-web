@@ -37,8 +37,7 @@ We are going to be working with some example data in `data/` folder.
 First run the data-processing code
 
 ```
-python preprocess.py --srcfile data/src-train.txt --targetfile data/targ-train.txt
---srcvalfile data/src-val.txt --targetvalfile data/targ-val.txt --outputfile data/demo
+python preprocess.py --srcfile data/src-train.txt --targetfile data/targ-train.txt --srcvalfile data/src-val.txt --targetvalfile data/targ-val.txt --outputfile data/demo
 ```
 
 This will take the source/target train/valid files (`src-train.txt, targ-train.txt,
@@ -56,6 +55,7 @@ Now run the model
 ```
 th train.lua -data_file data/demo-train.hdf5 -val_data_file data/demo-val.hdf5 -savefile demo-model
 ```
+
 This will run the default model, which consists of a 2-layer LSTM with 500 hidden units
 on both the encoder/decoder.
 You can also add `-gpuid 1` to use (say) GPU 1 in the cluster.
@@ -64,8 +64,7 @@ Now you have a model which you can use to predict on new data. To do this we are
 going to be running beam search
 
 ```
-th beam.lua -model demo-model_final.t7 -src_file data/src-val.txt -output_file pred.txt 
--src_dict data/demo.src.dict -targ_dict data/demo.targ.dict
+th beam.lua -model demo-model_final.t7 -src_file data/src-val.txt -output_file pred.txt -src_dict data/demo.src.dict -targ_dict data/demo.targ.dict
 ```
 This will output predictions into `pred.txt`. The predictions are going to be quite terrible,
 as the demo dataset is small. Try running on some larger datasets! For example you can download
