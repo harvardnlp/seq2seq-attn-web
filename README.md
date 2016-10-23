@@ -7,14 +7,15 @@ title: Documentation
 {:toc}
 
 
-## Dependencies
+## Installation 
 
-### Python
+
+### Dependencies (Python)
 
 * h5py
 * numpy
 
-### Lua 
+### Dependencies  (Lua) 
 
 You will need the following packages:
 
@@ -71,7 +72,7 @@ as the demo dataset is small. Try running on some larger datasets! For example y
 millions of parallel sentences for [translation](http://www.statmt.org/wmt15/translation-task.html)
 or [summarization](https://github.com/harvardnlp/sent-summary).
 
-## Details
+## API
 
 ### Preprocessing options (`preprocess.py`)
 
@@ -213,6 +214,8 @@ format.
 * `gpuid2`: ID if the second GPU (if specified).  
 * `cudnn`: If the model was trained with `cudnn`, then this should be set to 1 (otherwise the model
 will fail to load).
+
+## Advanced
 
 ### Switching between GPU/CPU models
 By default, the model will always save the final model as a CPU model, but it will save the

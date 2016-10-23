@@ -4,7 +4,7 @@ title: Home
 ---
 
 
-# OpenNMT
+## OpenNMT
 
 OpenNMT is a full-featured, open-source (MIT) neural machine translation system utilizing the [Torch](http://torch.ch) mathematical toolkit.
 

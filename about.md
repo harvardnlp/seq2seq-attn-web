@@ -4,7 +4,6 @@ title: About
 
 ---
 
-# About
 
 OpenNMT is made and supported by <a href="yoon.io">Yoon Kim</a> and <a href="nlp.seas.harvard.edu" target="_blank">harvardnlp</a>.
 
