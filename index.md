@@ -9,7 +9,7 @@ title: Home
 
 
 
-<center style="padding: 10px"><img src="simple-attn.png" /></center>
+<center style="padding: 40px"><img src="simple-attn.png" /></center>
 
 
 
