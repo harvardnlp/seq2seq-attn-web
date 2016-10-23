@@ -5,10 +5,13 @@ title: About
 ---
 
 
-OpenNMT is made and supported by <a href="yoon.io">Yoon Kim</a> and <a href="nlp.seas.harvard.edu" target="_blank">harvardnlp</a>.
+OpenNMT is made and supported by <a href="http://yoon.io">Yoon Kim</a> and <a href="http://nlp.seas.harvard.edu">harvardnlp</a>.
+
+<img src="http://lstm.seas.harvard.edu/logo_nlp.png" />
 
 Major source contributions also come from <a href="http://www.systransoft.com/">SYSTRAN</a>.
 
+<img src="http://lstm.seas.harvard.edu/logo_nlp.png" />
 
 ## Research
 
