@@ -7,23 +7,6 @@ title: Documentation
 {:toc}
 
 
-[Torch](http://torch.ch) implementation of a standard sequence-to-sequence model with (optional)
-attention where the encoder-decoder are LSTMs. Also has the option to use characters
-(instead of input word embeddings) by running a convolutional neural network followed by a
-[highway network](http://arxiv.org/abs/1505.00387) over character embeddings to use as inputs.
-
-The attention model is from
-[Effective Approaches to Attention-based
-Neural Machine Translation](http://stanford.edu/~lmthang/data/papers/emnlp15_attn.pdf),
-Luong et al. EMNLP 2015. We use the *global-general-attention* model with the
-*input-feeding* approach from the paper. Input-feeding is optional and can be turned off.
-
-The character model is from [Character-Aware Neural
-Language Models](http://arxiv.org/abs/1508.06615), Kim et al. AAAI 2016.
-
-This project is maintained by [Yoon Kim](http://people.fas.harvard.edu/~yoonkim).
-Feel free to post any questions/issues on the issues page.
-
 ## Dependencies
 
 ### Python
@@ -85,6 +68,7 @@ millions of parallel sentences for [translation](http://www.statmt.org/wmt15/tra
 or [summarization](https://github.com/harvardnlp/sent-summary).
 
 ## Details
+
 ### Preprocessing options (`preprocess.py`)
 
 * `srcvocabsize, targetvocabsize`: Size of source/target vocabularies. This is constructed
