@@ -8,6 +8,8 @@ title: Home
 
 OpenNMT is an open-source (MIT Licensed) neural machine translation system.
 
+<img src="simple-attn.png" />
+
 
 [Torch](http://torch.ch) implementation of a standard sequence-to-sequence model with (optional)
 attention where the encoder-decoder are LSTMs. Also has the option to use characters
