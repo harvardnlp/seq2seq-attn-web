@@ -1,5 +1,5 @@
 # Dependencies
-markdown:         redcarpet
+markdown:         Kramdown
 highlighter:      pygments
 
 # Permalinks
