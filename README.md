@@ -6,7 +6,6 @@ title: Documentation
 * This will become a table of contents (this text will be scraped).
 {:toc}
 
-## Sequence-to-Sequence Learning with Attentional Neural Networks
 
 [Torch](http://torch.ch) implementation of a standard sequence-to-sequence model with (optional)
 attention where the encoder-decoder are LSTMs. Also has the option to use characters
@@ -25,13 +24,13 @@ Language Models](http://arxiv.org/abs/1508.06615), Kim et al. AAAI 2016.
 This project is maintained by [Yoon Kim](http://people.fas.harvard.edu/~yoonkim).
 Feel free to post any questions/issues on the issues page.
 
-### Dependencies
+## Dependencies
 
-#### Python
+### Python
 * h5py
 * numpy
 
-#### Lua 
+### Lua 
 You will need the following packages:
 * hdf5
 * nngraph
@@ -44,7 +43,7 @@ If running the character model, you should also install:
 * cudnn
 * luautf8
 
-### Quickstart
+## Quickstart
 
 We are going to be working with some example data in `data/` folder.
 First run the data-processing code
@@ -85,8 +84,8 @@ as the demo dataset is small. Try running on some larger datasets! For example y
 millions of parallel sentences for [translation](http://www.statmt.org/wmt15/translation-task.html)
 or [summarization](https://github.com/harvardnlp/sent-summary).
 
-### Details
-#### Preprocessing options (`preprocess.py`)
+## Details
+### Preprocessing options (`preprocess.py`)
 
 * `srcvocabsize, targetvocabsize`: Size of source/target vocabularies. This is constructed
 by taking the top X most frequent words. Rest are replaced with special UNK tokens.  
@@ -105,7 +104,7 @@ will ignore the `srcvocabsize,targetvocabsize`.
 * `unkfilter`: Ignore sentences with too many UNK tokens. Can be an absolute count limit (if > 1)
 or a proportional limit (0 < unkfilter < 1).  
 
-#### Training options (`train.lua`)
+### Training options (`train.lua`)
 **Data options**
 
 * `data_file, val_data_file`: Path to the training/validation `*.hdf5` files created from running
@@ -187,7 +186,7 @@ has much faster convolutions so this is highly recommended if using the characte
 * `save_every`: Save every this many epochs.  
 * `print_every`: Print various stats after this many batches.
 
-#### Decoding options (`beam.lua`)
+### Decoding options (`beam.lua`)
 
 * `model`: Path to model .t7 file.  
 * `src_file`: Source sequence to decode (one line per sequence).  
@@ -227,13 +226,13 @@ format.
 * `cudnn`: If the model was trained with `cudnn`, then this should be set to 1 (otherwise the model
 will fail to load).
 
-#### Switching between GPU/CPU models
+### Switching between GPU/CPU models
 By default, the model will always save the final model as a CPU model, but it will save the
 intermediate models as a CPU/GPU model depending on how you specified `-gpuid`.
 If you want to run beam search on the CPU with an intermediate model trained on the GPU,
 you can use `convert_to_cpu.lua` to convert the model to CPU and run beam search.
 
-#### GPU memory requirements/Training speed
+### GPU memory requirements/Training speed
 Training large sequence-to-sequence models can be memory-intensive. Memory requirements will
 dependent on batch size, maximum sequence length, vocabulary size, and (obviously) model size.
 Here are some benchmark numbers on a GeForce GTX Titan X.
@@ -252,7 +251,7 @@ the above numbers accordingly. You can make use of memory on multiple GPUs by us
 `-gpuid2` option in `train.lua`. This will put the encoder on the GPU specified by
 `-gpuid`, and the decoder on the GPU specified by `-gpuid2`. 
 
-#### Evaluation
+### Evaluation
 For translation, evaluation via BLEU can be done by taking the output from `beam.lua` and using the
 `multi-bleu.perl` script from [Moses](https://github.com/moses-smt/mosesdecoder). For example
 
@@ -260,23 +259,3 @@ For translation, evaluation via BLEU can be done by taking the output from `beam
 perl multi-bleu.perl gold.txt < pred.txt
 ```
 
-#### Pre-trained models
-We've uploaded English <-> German models trained on 4 million sentences from
-[Workshop on Machine Translation 2015](http://www.statmt.org/wmt15/translation-task.html).
-Download link is below:
-
-https://drive.google.com/open?id=0BzhmYioWLRn_aEVnd0ZNcWd0Y2c
-
-These models are 4-layer LSTMs with 1000 hidden units and essentially replicates the results from
-[Effective Approaches to Attention-based
-Neural Machine Translation](http://stanford.edu/~lmthang/data/papers/emnlp15_attn.pdf),
-Luong et al. EMNLP 2015.
-
-#### Acknowledgments
-Our implementation utilizes code from the following:
-* [Andrej Karpathy's char-rnn repo](https://github.com/karpathy/char-rnn)
-* [Wojciech Zaremba's lstm repo](https://github.com/wojzaremba/lstm)
-* [Element rnn library](https://github.com/Element-Research/rnn)
-
-#### Licence
-MIT
