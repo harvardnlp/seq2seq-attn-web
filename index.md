@@ -10,10 +10,11 @@ OpenNMT is a full-featured, open-source (MIT) neural machine translation system 
 
 <img src="simple-attn.png" />
 
+Highlights of the system include:
 
-*
-*
-*
+* Highly optimized GPU/CPU training 
+* Simple interface, only requires and source/target files  
+* 
 *
 
 
