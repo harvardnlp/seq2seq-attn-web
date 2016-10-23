@@ -4,9 +4,7 @@ title: Home
 ---
 
 
-## OpenNMT
-
-OpenNMT is an open-source (MIT Licensed) neural machine translation system.
+OpenNMT is a full-featured open-source (MIT-Licensed) neural machine translation system.
 
 <img src="simple-attn.png" />
 
