@@ -4,4 +4,10 @@ title: Home
 ---
 
 
-## Seq2Seq Atten
+## OpenNMT
+
+OpenNMT is an open-source (MIT Licensed) neural machine translation system.
+
+
+
+
