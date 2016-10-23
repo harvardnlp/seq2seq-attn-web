@@ -10,19 +10,24 @@ title: Documentation
 ## Dependencies
 
 ### Python
+
 * h5py
 * numpy
 
 ### Lua 
+
 You will need the following packages:
+
 * hdf5
 * nngraph
 
 GPU usage will additionally require:
+
 * cutorch
 * cunn
 
 If running the character model, you should also install:
+
 * cudnn
 * luautf8
 
