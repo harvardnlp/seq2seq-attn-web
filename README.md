@@ -3,6 +3,9 @@ layout: page
 title: Documentation
 ---
 
+* This will become a table of contents (this text will be scraped).
+{:toc}
+
 ## Sequence-to-Sequence Learning with Attentional Neural Networks
 
 [Torch](http://torch.ch) implementation of a standard sequence-to-sequence model with (optional)
